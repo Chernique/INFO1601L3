@@ -1,141 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Pigeon Site</title>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+
+div{
+  width: 400px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: white;
+  color: black;
+  text-align: center;
+  box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius:4px;
+  padding: 5px;
+}
+
+div> h2{
+  text-decoration: none;
+}
+
+        .bold{
+          font-weight: bold;
         }
-        section {
-            width: 80%;
-            max-width: 500px;
-            background-color: white;
-            border-radius: 4px;
-            padding: 1.5em;
-            margin: 1em 0;
+        
+        h2{
+          text-align: center;
+          text-decoration: underline overline solid black;
         }
-        nav {
-            background-color: blue;
-            width: 100%;
-            padding: 1em 0;
+        
+        p{
+          text-align: justify;
+          width:50vw;
+          margin-left: auto;
+          margin-right: auto;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 2em;
+        
+        section{
+          border-bottom: 5px solid black;
+          height: 40vh;
+          overflow-y:scroll
         }
-        nav ul li {
-            display: inline;
+        
+        #section1::before{
+          background-image: url("https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
+          background-size: stretch;
+          background-position: center;
+          content: "";
+          position: absolute;
+          width:100%;
+          height: 40vh;
+          z-index: -2;
+          opacity: 0.3;
         }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            padding: 0.5em 1em;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+        
+        #section2{
+          padding: 2em;
+          color: white;
+          background: rgb(131,58,180);
+          background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,211,253,1) 50%, rgba(252,176,69,1) 100%);
         }
-        nav ul li a:hover {
-            background-color: lightblue;
+        
+        p:hover{
+          outline: 2px double red;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid rgb(221, 221, 221);
-            padding: 1em;
-            text-align: left;
-        }
-        summary {
-            background-color: #D9DCD6;
-            padding: 1em;
-            cursor: pointer;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-        }
-        label {
-            display: inline;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>The Pigeon Site</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#picture">Picture</a></li>
-            <li><a href="#famous-pigeons">Famous Pigeons</a></li>
-            <li><a href="#trivia">Trivia</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="picture">
-        <h1>Picture</h1>
-        <img src="pigeon.jpg" alt="Pigeon" width="500">
+        </style>
+  </head>
+  <body>
+    <h1> Sample Poem</h1>
+    <section id="section1">
+        <h2> Come to Labs</h2>
+              <p>
+                    <span class="bold"> Why</span> won't students come to labs? This is something I always ponder. 
+                    After unprepared students write exams, They watch their marks in wonder. 
+              </p>
+               <p>
+                <span class="bold"> Why</span> won't students come to labs? What is more important than class? 
+                   How can you be a student if you don't even try to pass?
+               </p> 
+                <p>
+                    <span class="bold"> Why</span> won't students come to labs? It happens all the time. 
+                   If you came to labs, you'd know what to do. But you would rather duck and go lime.
+               </p>
+               <p>
+                <span class="bold"> Why</span> won't students come to labs? I see them all now stressing. 
+                  If you only learned this basic programming, You would surely now be zessing.
+                </p>
+      <!-- This is how html comments are done btw -->
     </section>
-    <section id="trivia">
-        <h1>Trivia</h1>
-        <details><summary>They Understand Space and Time</summary>
-            <p>A 2017 study found pigeons could evaluate the time it takes a digital line to be drawn according to its length.</p>
-        </details>
-        <details><summary>They are Excellent at Homing</summary>
-            <p>Pigeons can find their way home from 1300 miles away even if they've been transported in complete isolation.</p>
-        </details>
-        <details><summary>They can diagnose cancer</summary>
-            <p>A 2015 study revealed that pigeons can be trained to diagnose cancer from images with astonishing accuracy of 99%.</p>
-        </details>
+    <section id="section2">
+         <h1>Section 2</h1>
+         <div> <b>My Div</b></div>
     </section>
-    <section id="famous-pigeons">
-        <h1>Famous Pigeons</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Bio</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>G. I. Joe</td>
-                    <td>Flown 20 miles to cancel a bombing on friendly British Troops.</td>
-                </tr>
-                <tr>
-                    <td>Cher Ami</td>
-                    <td>Flown for 25 minutes to deliver a crucial message to base despite being shot at.</td>
-                </tr>
-                <tr>
-                    <td>Mocker</td>
-                    <td>Delivered a life-saving message after losing its eye from artillery fire.</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <section id="contact">
-        <h1>Contact</h1>
-        <form>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-
